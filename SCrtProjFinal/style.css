@@ -1,0 +1,556 @@
+body{
+    background-color:rgb(76, 101, 142);
+    background-image: url(img/other/background.jpg);
+    width: 100%;
+    margin: auto;
+}
+
+#main{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+#home{
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 70%;
+    height: auto;;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 1%;
+    float: left;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#logedin{
+    display: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 26.5%;
+    height: auto;
+    margin: auto;
+    float: right;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#login{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 26.5%;
+    margin: auto;
+    float: right;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#cart{
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 26.5%;
+    margin: auto;
+    margin-top: 15px;
+    float: right;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1{
+    color: rgb(76, 101, 142);
+}
+
+h4{
+    color: rgb(45, 61, 86);
+}
+
+#link{
+    text-decoration: none;
+    color: rgb(76, 101, 142);
+    cursor:pointer;
+}
+
+#link:hover{
+    color: rgb(45, 61, 86);
+}
+
+/***************************** Navigation Bar ***********************************/
+#topnav {
+    height: 60px;
+    width: 90%;
+    margin: auto;
+    padding-left: 10%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: rgb(76, 101, 142) solid 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#logo{
+    font-family:serif;
+    font-size: 50px;
+    font-weight: bolder;
+    display: block;
+    float:left;
+    width: 200px;
+    cursor:default;
+}
+
+#menuBtn{
+    display: block;
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    float: right;
+    margin-right: 11%;
+    cursor: pointer;
+}
+
+#loginNav{
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 12%;
+    cursor: pointer;
+    height: 60px;
+    width: auto;
+    background-image: url(img/other/Hamburger_icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#loginNav.active{
+    background-color: rgb(45, 61, 86);
+}
+
+/********************************* item popup **************************************/
+#itemPopupBigCont{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 68, 68, 0.9);
+    z-index: 2;
+    overflow: hidden
+}
+
+#itemPopupCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: auto;
+    background-color: white;
+    text-align: center;
+}
+
+#itemPopupName{
+    width: 92%;
+    height: auto;
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    background-color: rgba(76, 101, 142, 1);
+    padding: 2% 4%;
+}
+
+#popupclose{
+    float: right;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(239, 71, 71);
+    cursor: pointer;
+}
+
+#popupclose:hover{
+    color: rgb(193, 56, 56);
+}
+
+#itemPopupImgCont{
+    display: block;
+    width: 50%;
+    height: 300px;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 0px;
+    margin: 4%;
+}
+
+#itemPopupPrice{
+    display: block;
+    float: left;
+    width: 38%;
+    height: auto;
+    margin: 4% 0% 2% 0%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#itemQuantity{
+    display: block;
+    float: right;
+    font-size: 15px;
+    padding-top: 15px;
+    color: rgb(239, 71, 71);
+}
+
+#itemPopupDescriptionTitle{
+    display: block;
+    float: left;
+    width: 38%;
+    height: 25px;
+    color: rgb(41, 101, 155);
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#itemPopupDescription{
+    display: block;
+    float: left;
+    width: 38%;
+    height: 180px;
+    overflow: scroll;
+    text-align: left;
+    margin-bottom: 4%;
+}
+
+#itemPopupAdd{
+    display: block;
+    float: left;
+    width: 38%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#itemPopupAdd:not(.outOfStock){
+    background-color: rgb(76, 101, 142);
+}
+
+#itemPopupAdd:hover{
+    background-color: rgb(45, 61, 86);
+}
+
+.outOfStock{
+    pointer-events: none;
+    cursor: default;
+    background-color: rgb(206, 206, 206);
+}
+
+/************************************* home ****************************************/
+.itemCont{
+    margin: 2%;
+    display: block;
+    background-color: white;
+    width: 29%;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#imgCont{
+    display: block;
+    width: 90%;
+    height: 70%;
+    margin: 5%;
+}
+
+#itemImg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+}
+
+#itemName{
+    cursor: pointer;
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0% 5% 5% 5%;
+    color: rgb(76, 101, 142);
+    float: left;
+}
+
+#itemName:hover{
+    color: rgb(127, 0, 0);
+}
+
+#itemPrice{
+    cursor: pointer;
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0% 5%;
+    color: #333;
+    float: left;
+}
+
+/*************************************** logedin **********************************/
+#welcomeMsg{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 3%;
+    margin: auto;
+    margin-bottom: 15px;
+    text-align: left;
+    background-color: rgb(76, 101, 142);
+    width: 94%;
+    height: 25px;
+    cursor: default;
+}
+
+#logoutBtn{
+    display: block;
+    color: white;
+    background-color: rgb(239, 71, 71);
+    width: 80%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 15px;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#logoutBtn:hover{
+    background-color: rgb(160, 48, 48);
+    color: white;
+}
+
+/***************************** Log in / sign up *****************************/
+#loginSignupBtn{
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+    border-bottom: rgb(76, 101, 142) solid 15px;
+}
+
+#loginSignupBtn a.active{
+    background-color: rgb(76, 101, 142);
+}
+
+#loginSignupBtn a{
+    cursor: pointer;
+    color: white;
+    display: block;
+    width: 50%;
+    padding: 10px 0px;
+    margin: auto;
+    float: left;
+    text-align: center;
+}
+
+#loginSignupBtn a:not(.active){
+    color: black;
+}
+
+#loginSignupBtn a:hover:not(.active) {
+    color: white;
+    background-color: rgb(45, 61, 86);
+}
+
+/******************** login form ********************/
+#loginContent{
+    display: block;
+    padding: 10px;
+}
+
+#loginFormCont input[type=text]{
+    width: 100%;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#loginBtn{
+    cursor: pointer;
+    background-color: rgb(76, 101, 142);
+    color: white;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    text-align: center;
+    display: block;
+}
+
+#loginBtn:hover{
+    background-color: rgb(45, 61, 86);
+}
+/******************** signup form ********************/
+#signUpContent{
+    display: none;
+    padding: 10px;
+}
+
+#signUpFormCont input[type=text], input[type=password]{
+    width: 100%;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#signUpBtn{
+    cursor: pointer;
+    background-color: rgb(76, 101, 142);
+    color: white;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    text-align: center;
+    display: block;
+}
+
+#signUpBtn:hover{
+    background-color: rgb(45, 61, 86);
+}
+
+.errormsg{
+    display: none;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgb(127, 0, 0);
+}
+
+/************************************* shopping Cart ***********************************/
+#cartTitle{
+    background-color: rgb(76, 101, 142);
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    margin: auto;
+    margin-bottom: 5%;
+    float: left;
+    text-align: center;
+}
+
+.cartItemCont{
+    margin: 0% 5% 5% 5%;
+    display: block;
+    background-color: white;
+    height: 100px;
+    float: left;
+    overflow: hidden;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#cartImgCont{
+    display: block;
+    width: 40%;
+    height: 80%;
+    margin-top: 5%;
+    float: left;
+}
+
+#cartItemImg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+}
+
+#cartItemPrice{
+    display: block;
+    width: 40%;
+    float: left;
+    cursor: pointer;
+}
+
+#cartItemName{
+    cursor: pointer;
+    display: block;
+    width: 40%;
+    height: 55px;
+    margin: 5% 5% 5% 0%;
+    color: rgb(76, 101, 142);
+    float: left;
+    overflow: hidden;
+}
+
+#cartItemDel{
+    display: block;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+    width: 15%;
+    height: 100%;
+    float: right;
+    background-color: rgb(239, 71, 71);
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    line-height: 100px;
+    text-decoration: none;
+}
+
+#cartItemDel:hover{
+    background-color: rgb(193, 56, 56);
+}
+
+#checkOut{
+    display: block;
+    color: white;
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0% 5% 5% 5%;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    float: left;
+    text-decoration: none;
+}
+
+#checkOut:not(.outOfStock){
+    background-color: rgb(76, 101, 142);
+}
+
+#checkOut:hover{
+    background-color: rgb(45, 61, 86);
+    color: white;
+}
+
+#cartTotal{
+    display: block;
+    width: 86%;
+    margin: 5% 7% 5% 7%;
+    float: left;
+}
+
+/***************************** When screen size gets small *****************************/
+@media screen and (max-width: 500px){
+    body {
+        width: 100%;
+    }
+    
+    #signUpContent{
+        margin: 10% 5%;
+        width: 83%;
+    }
+}

@@ -1,0 +1,614 @@
+html{
+    background-color:rgb(50,50,50);
+    background-image:url(img/question_mark.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.submit{
+    background-color: rgb(76, 101, 142);
+}
+
+#main{
+    background-color:rgba(50,50,50,0.7);
+    width: 80%;
+    height: 100%;
+    padding: 15px;
+    margin: auto;
+    margin-top: 1.5%;
+}
+
+#pageHeader{
+    display: block;
+    width: 92%;
+    height: auto;
+    background-color: rgb(76, 101, 142);
+    padding: 1% 3%;
+    margin: 1%;
+    margin-bottom: 1%;
+    color: white;
+    cursor: default;
+}
+
+/**************************************** Popup ***************************************/
+#popupForm{
+    display: block;
+    width: 92%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1% 3%;
+    margin: 1% 1% 0% 1%;
+}
+
+#popupForm h3{
+    color: rgb(45, 61, 86);
+    margin-top: 25px;
+    margin-bottom: 0;
+    cursor: default;
+}
+
+#popupForm input[type=text]{
+    width: 95%;
+    font-size: 15px;
+    text-align: left;
+    border-color: rgba(76, 101, 142, 0.5);
+    border-radius: 5px;
+    background-color: rgba(175, 175, 175, 0.2);
+    margin: 10px 0 0px 0;
+    padding: 8px 2%;
+    outline-style:none;
+}
+
+#popupSubmit{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(76, 101, 142);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+    line-height: 40px;
+}
+
+#popupSubmit:hover{
+    background-color: rgb(45, 61, 86);
+}
+
+#answerCon{
+    width: 100%;
+    max-height: 144px;
+    overflow: scroll;
+    overflow-x:hidden;
+}
+
+/* adding more answers */
+#moreAnswer{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(76, 101, 142,0.5);
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 40px;
+    color: rgb(48,58,62);
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#moreAnswer:hover{
+    background-color: rgba(45, 61, 86,0.5);
+    color: white;
+}
+
+/*********************************** Navigation Bar ***********************************/
+#topnav {
+    width: 91%;
+    height: 100%;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px 0px 0px 9%;
+    overflow: hidden;
+    background-color: rgba(50,50,50, 0.7);
+    border-bottom: rgb(76, 101, 142) solid 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#topnav li {
+    float: left;
+    height: 100%;
+}
+
+#topnav li a {
+    display: block;
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 25px;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#topnav li a:hover:not(.active) {
+    background-color: rgb(45, 61, 86);
+}
+
+#topnav li a.active{
+    background-color: rgb(76, 101, 142);
+}
+
+#topnav li.right {
+    float: right;
+}
+
+#logo{
+    display: block;
+    float: left;
+    height: 25px;
+    width: auto;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+#navMenu{
+    display: none;
+    height: 25px;
+    width: auto;
+    object-fit: contain;
+    position:absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+/************************************* Login/ Register *************************************/
+#bigCont{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#backBtn{
+    position: fixed;
+    top: 5px;;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    font-family:sans-serif;
+    cursor: pointer;
+}
+
+#loginCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    text-align: center;
+}
+
+#loginCont a{
+    background-color: rgb(76, 101, 142);
+    color:white;
+    margin: 10px 0;
+    padding: 10px 0;
+    text-decoration: none;
+    display: block;
+    float: left;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#loginCont a:hover{
+    background-color: rgb(45, 61, 86);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#loginCont input[type=text], input[type=password]{
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    border-color: rgba(76, 101, 142, 0.5);
+    border-radius: 5px;
+    background-color: rgba(175, 175, 175, 0.2);
+    margin: 10px 0 0px 0;
+    padding: 8px 0;
+    outline-style:none;
+}
+
+#loginNavBar{
+    display: none;
+    height: 40px;
+    width: 100%;
+    float: left;
+    cursor: pointer;
+}
+
+#loginNavBar p{
+    float: left;
+    color: rgb(76, 101, 142);
+    font-size: 18px;
+}
+
+#loginNavBar p:hover{
+    color: rgb(45, 61, 86);
+    text-shadow: 0 0 2px rgb(181, 181, 181);
+}
+
+#loginTitle{
+    display: block;
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-weight: bold;
+    color: rgb(76, 101, 142);
+    width: 50%;
+    float: left;
+}
+
+#loginTitle:not(.active){
+    color: rgba(76, 101, 142, 0.5);
+}
+
+#loginTitle:hover:not(.active) {
+    color: rgba(45, 61, 86, 0.5);
+    cursor: pointer;
+}
+
+#backButton{
+    background-color: rgb(76, 101, 142);
+    color:white;
+    margin: 10px 0;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    width: 19px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+#backButton:hover{
+    background-color: rgb(45, 61, 86);
+}
+
+#login{
+    display: block;
+}
+
+#signup{
+    display: none;
+}
+
+/************************************** Survey List **************************************/
+
+#surveyList{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.surveyListCont{
+    display: block;
+    width: 48%;
+    height: 100px;
+    float: left;
+    margin: 1%;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.surveyListTitle{
+    display: block;
+    width: 80%;
+    height: 25px;
+    font-size: 20px;
+    float: left;
+    font-weight: bolder;
+    margin: 2%;
+    overflow: hidden;
+    cursor: default;
+}
+
+.surveyLink{
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(76, 101, 142);
+}
+
+.surveyLink:hover{
+    color: rgb(45, 61, 86);
+}
+
+.surveyListDescription{
+    display: block;
+    width: 80%;
+    height: auto;
+    float: left;
+    margin: 2%;
+    overflow: hidden;
+    cursor: default;
+}
+
+.surveyListBtn{
+    display: block;
+    width: 16%;
+    height: 100%;
+    float: right;
+    background-color: rgb(76, 101, 142);
+    background-image: url(img/note.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.surveyListBtn:hover{
+    background-color: rgb(45, 61, 86);
+    background-image: url(img/note_hover.png);
+}
+
+/************************************** display Survey ************************************/
+#surveyHeader{
+    display: block;
+    width: 92%;
+    height: auto;
+    background-color: rgb(76, 101, 142);
+    padding: 1% 3%;
+    margin: 1%;
+    margin-bottom: 2%;
+    cursor: default;
+}
+
+#surveyHeader h1{
+    color: white;
+}
+
+#surveyHeader p{
+    color: rgb(255, 246, 158);
+}
+
+#surveyForm{
+    display: block;
+    width: 92%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1% 3%;
+    margin: 1%;
+}
+
+#surveyForm h3{
+    color: rgb(45, 61, 86);
+    margin-top: 25px;
+    margin-bottom: 0;
+    cursor: default;
+}
+
+#surveyForm h4{
+    color: rgb(45, 61, 86);
+    cursor: default;
+}
+
+#surveyForm hr{
+    border: rgb(76, 101, 142) solid 1px;
+}
+
+#surveyForm input[type=text]{
+    width: 95%;
+    font-size: 15px;
+    text-align: left;
+    border-color: rgba(76, 101, 142, 0.5);
+    border-radius: 5px;
+    background-color: rgba(175, 175, 175, 0.2);
+    margin: 10px 0 0px 0;
+    padding: 8px 2%;
+    outline-style:none;
+}
+
+#surveySubmit{
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(76, 101, 142);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#surveySubmit:hover{
+    background-color: rgb(45, 61, 86);
+}
+
+/*********************************** My Survey ***********************************/
+.surveyEditBtn{
+    display: block;
+    width: 16%;
+    height: 100%;
+    float: right;
+    background-color: rgb(76, 101, 142);
+    background-image: url(img/edit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.surveyEditBtn:hover{
+    background-color: rgb(45, 61, 86);
+    background-image: url(img/edit_hover.png);
+}
+
+#newSurveyCont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    padding: 1%;
+    background-color: rgba(50,50,50,0.7);
+}
+
+#closePopup{
+    position: fixed;
+    top: 20px;;
+    right: 20px;
+    color: white;
+    font-size: 20px;
+    font-family:sans-serif;
+    cursor: pointer;
+}
+
+#newSurveyBtn{
+    display: block;
+    width: 48%;
+    height: 100px;
+    float: left;
+    margin: 1%;
+    background-color: rgba(76, 101, 142,0.5);
+    font-size: 70px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 100px;
+    color: rgb(48,58,62);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#newSurveyBtn:hover{
+    background-color: rgba(45, 61, 86,0.5);
+    color: white;
+}
+
+/*********************************** Edit Survey ***********************************/
+
+#addQuestionBtn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 1%;
+    background-color: rgba(76, 101, 142,0.5);
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 50px;
+    color: rgb(48,58,62);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#addQuestionBtn:hover{
+    background-color: rgba(45, 61, 86,0.5);
+    color: white;
+}
+
+/* delete the survey */
+#deleteSurvey{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 1%;
+    background-color: rgba(219, 70, 70,0.5);
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 50px;
+    color: rgb(48,58,62);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#deleteSurvey:hover{
+    background-color: rgba(153, 47, 47,0.5);
+    color: white;
+}
+
+/*********************************** survey result ***********************************/
+#resultBigCont{
+    display: block;
+    width: 92%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1% 3%;
+    margin: 1%;
+}
+
+#resultBigCont h4{
+    color: rgb(45, 61, 86);
+    cursor: default;
+}
+
+#resultBigCont hr{
+    border: rgb(76, 101, 142) solid 1px;
+}
+
+.resultChart{
+    display: block;
+    float: left;
+    height: 30px;
+    background-color: rgb(76, 101, 142);
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+    line-height: 30px;
+    cursor: default;
+}
+/*********************************** Screen Size Change ***********************************/
+@media only screen and (max-width: 575px){
+    body {
+        width: 100%;
+    }
+    
+    #main{
+        width: 90%;
+    }
+    
+    #topnav{
+        width: 100%;
+        height: 43px;;
+        padding: 0px;
+    }
+    
+    #topnav li.right, #topnav li {
+        float: none;
+    }
+    
+    #logo{
+        display: none;
+    }
+    
+    #navMenu{
+        display: block;
+    }
+    
+    .surveyListCont{
+        width: 98%;
+    }
+    
+    #newSurveyBtn{
+        width: 98%;
+    }
+}
